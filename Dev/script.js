@@ -17,6 +17,19 @@ var confirmUpper;
 var confirmNum;
 var confirmSpec;
 
+// Insert function to prompt user input
+function generatePassword () {
+  var confirmLength = prompt("How many characters do you need in your password?");
+
+    // Loop generatePassword function if user inputs less than 8 or greater and 128
+    while(confirmLength <= 7 || confirmLength >= 129) {
+      alert("Password length must be between 8 and 128 characters, please try again!");
+      var confirmLength = (prompt("How many characters do you need in your password?"));
+    }
+
+    //Confirm user input with alert
+    alert("Your password will be " + confirmLength + " characters long.");
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
