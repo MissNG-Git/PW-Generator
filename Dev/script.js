@@ -30,6 +30,21 @@ function generatePassword () {
     //Confirm user input with alert
     alert("Your password will be " + confirmLength + " characters long.");
 
+  // Determine parameters of password 
+  var confirmLower = confirm("Click OK if you would like your password to include lowercase characters.");
+  var confirmUpper = confirm("Click OK if you would like your password to include uppercase characters.");
+  var confirmNum = confirm("Click OK if you would like your password to include numeric characters.");
+  var confirmSpec = confirm("Click OK if you would like your password to include special characters.");
+
+    // Loop if answer is outside the parameters 
+    while(confirmLower === false && confirmUpper === false && confirmNum === false && confirmSpec === false) {
+      alert("You must choose at least one parameter");
+      var confirmLower = confirm("Click OK if you would like your password to include lowercase characters.");
+      var confirmUpper = confirm("Click OK if you would like your password to include uppercase characters.");
+      var confirmNum = confirm("Click OK if you would like your password to include numeric characters.");
+      var confirmSpec = confirm("Click OK if you would like your password to include special characters.");  
+    }
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
