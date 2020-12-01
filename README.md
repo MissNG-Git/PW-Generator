@@ -8,10 +8,9 @@ The password can include special characters. If you’re unfamiliar with these, 
 
 ```
 + Randomly generate a password that meets certain user-requested criteria
-+ Generate passwords to be inclusive of special characters [(OWASP Foundation)] (https://www.owasp.org/index.php/Password_special_characters") where reqeusted.
++ Generate passwords to be inclusive of special characters (OWASP Foundation) where reqeusted
 + Allow for users to create strong passwords for greater account security
-+ Ensure user experience is intuitive and easy to navigate by providing a clean & polished look.
-
++ Ensure user experience is intuitive and easy to navigate by providing a clean & polished look
 
 ```
 
@@ -20,6 +19,7 @@ The password can include special characters. If you’re unfamiliar with these, 
 The following image shows the web application's appearance and functionality:
 
 ![password generator demo](./Assets/03-javascript-homework-demo.png)
+
 
 ### Overview of Code Functionality
 
