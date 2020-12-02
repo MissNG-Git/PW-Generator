@@ -36,7 +36,7 @@ function generatePassword () {
 
     // Loop confirmVariables if answer is outside the parameters (all false)
     while(confirmLower === false && confirmUpper === false && confirmNum === false && confirmSpec === false) {
-      alert("You must choose at least one parameter!");
+      alert("Please choose at least one password parameter!");
       var confirmLower = confirm("Click OK if you would like your password to include lowercase characters.");
       var confirmUpper = confirm("Click OK if you would like your password to include uppercase characters.");
       var confirmNum = confirm("Click OK if you would like your password to include numeric characters.");
