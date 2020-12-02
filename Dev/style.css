@@ -14,7 +14,15 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-image:url(https://i.gifer.com/U1c.gif);
+  background-repeat: repeat-y;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .wrapper {
@@ -27,14 +35,27 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: hsl(208, 26%, 27%);
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+  text-shadow: 0 0 10px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsla(0, 0%, 91%, 0.950);
   border-radius: 5px;
   border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  box-shadow: 5px 5px 40px 5px #0ff;
   color: hsl(206, 17%, 28%);
   font-size: 18px;
   margin: 0 auto;
