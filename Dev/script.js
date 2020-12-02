@@ -1,9 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Event listener to action writePassword function when generate button clicked
-generateBtn.addEventListener("click", writePassword);
-
 // Arrays to set different parameters
 var alphaLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var alphaUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -52,30 +49,30 @@ function generatePassword () {
       
     // If confirmVariables= true, then passChar concatenated with relative array value (ie. if confirmLower = true --> "__", "a", "b", "c" ...)
     if (confirmLower) {
-      passChar = passChar.concat(alphaLower)
+      passChar = passChar.concat(alphaLower);
     }
 
     if (confirmUpper) {
-      passChar = passChar.concat(alphaUpper)
+      passChar = passChar.concat(alphaUpper);
     }
       
     if (confirmNum) {
-      passChar = passChar.concat(numChar)
+      passChar = passChar.concat(numChar);
     }
 
     if (confirmSpec) {
-      passChar = passChar.concat(speChar)
+      passChar = passChar.concat(speChar);
     }
 
-    console.log(passChar)
+    console.log(passChar);
 
   // Empty string to be filled based on 'for loop' selecting random characters from the array
-  var randomPassword = ""
+  var randomPassword = "";
       
     //If i = less than the user input # from confirmLength prompt, add character until input # reached
     for (var i = 0; i < confirmLength; i++) {
       randomPassword = randomPassword + passChar[Math.floor(Math.random() * passChar.length)];
-      console.log(randomPassword)
+      console.log(randomPassword);
     }
     return randomPassword;
 }
@@ -86,5 +83,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
+
+// Event listener to action writePassword function when generate button clicked
+generateBtn.addEventListener("click", writePassword);
