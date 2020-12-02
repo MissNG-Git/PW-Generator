@@ -17,30 +17,30 @@ var confirmSpec;
 
 // Function to prompt user input
 function generatePassword() {
-  var confirmLength = prompt("How many characters do you need in your password?");
+  confirmLength = prompt("How many characters do you need in your password?");
 
     // Loop generatePassword function if user inputs less than 8 or greater than 128
     while(confirmLength <= 7 || confirmLength >= 129) {
       alert("Password length must be between 8 and 128 characters,\nplease try again!");
-      var confirmLength = (prompt("How many characters would you like your password to be?"));
+      confirmLength = (prompt("How many characters would you like your password to be?"));
     }
 
     // Alert confirmation of password length
     alert("Your password will be " + confirmLength + " characters long.");
 
   // Confirm boxes for user to set parameters of password (confirmVariables)
-  var confirmLower = confirm("Click OK if you would like your password to include lowercase characters.");
-  var confirmUpper = confirm("Click OK if you would like your password to include uppercase characters.");
-  var confirmNum = confirm("Click OK if you would like your password to include numeric characters.");
-  var confirmSpec = confirm("Click OK if you would like your password to include special characters.");
+  confirmLower = confirm("Click OK if you would like your password to include lowercase characters.");
+  confirmUpper = confirm("Click OK if you would like your password to include uppercase characters.");
+  confirmNum = confirm("Click OK if you would like your password to include numeric characters.");
+  confirmSpec = confirm("Click OK if you would like your password to include special characters.");
 
     // Loop confirmVariables if answer is outside the parameters (all false)
     while(confirmLower === false && confirmUpper === false && confirmNum === false && confirmSpec === false) {
       alert("Please choose at least one password parameter!");
-      var confirmLower = confirm("Click OK if you would like your password to include lowercase characters.");
-      var confirmUpper = confirm("Click OK if you would like your password to include uppercase characters.");
-      var confirmNum = confirm("Click OK if you would like your password to include numeric characters.");
-      var confirmSpec = confirm("Click OK if you would like your password to include special characters.");  
+      confirmLower = confirm("Click OK if you would like your password to include lowercase characters.");
+      confirmUpper = confirm("Click OK if you would like your password to include uppercase characters.");
+      confirmNum = confirm("Click OK if you would like your password to include numeric characters.");
+      confirmSpec = confirm("Click OK if you would like your password to include special characters.");  
     }
 
   // Assign actions based on user input password parameters ↓
@@ -103,5 +103,5 @@ function copyPassword() {
     document.getElementById("password").select();
     // Copy text inside password field
     document.execCommand("Copy");
-    alert("Generated password has been copied to your clipboard!");
+    alert("Password has been copied to your clipboard!");
 }
