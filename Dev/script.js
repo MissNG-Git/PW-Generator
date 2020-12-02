@@ -69,6 +69,17 @@ function generatePassword () {
 
     console.log(passChar)
 
+  // Empty string to be filled based on 'for loop' selecting random characters from the array
+  var randomPassword = ""
+      
+    //If i = less than the user input # from confirmLength prompt, add character until input # reached
+    for (var i = 0; i < confirmLength; i++) {
+      randomPassword = randomPassword + passChar[Math.floor(Math.random() * passChar.length)];
+      console.log(randomPassword)
+    }
+    return randomPassword;
+}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
