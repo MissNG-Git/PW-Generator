@@ -1,4 +1,4 @@
-// Assignment Code
+// Assignment Code for Generate Password button
 var generateBtn = document.querySelector("#generate");
 
 // Arrays to set different parameters
@@ -16,7 +16,7 @@ var confirmNum;
 var confirmSpec;
 
 // Function to prompt user input
-function generatePassword () {
+function generatePassword() {
   var confirmLength = prompt("How many characters do you need in your password?");
 
     // Loop generatePassword function if user inputs less than 8 or greater than 128
@@ -85,5 +85,23 @@ function writePassword() {
   passwordText.value = password;
 }
 
-// Event listener to action writePassword function when generate button clicked
+// Event listener to execute writePassword function when generate button clicked
 generateBtn.addEventListener("click", writePassword);
+
+
+// Assignment Code for Copy to Clipboard button
+var copy = document.querySelector("#copy");
+
+// Event listener to execute copyPassword fuction when copy button clicked
+copy.addEventListener("click", function () {
+    copyPassword();
+});
+
+// Function to copy generated password when clicked
+function copyPassword() {
+    // Select generated password text
+    document.getElementById("password").select();
+    // Copy text inside password field
+    document.execCommand("Copy");
+    alert("Generated password has been copied to your clipboard!");
+}
