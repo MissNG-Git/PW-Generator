@@ -36,12 +36,12 @@ function generatePassword() {
     // Alert confirmation of password length
     alert("Your password will be " + confirmLength + " characters long.");
     // Execute function for user to confirm desired password parameters
-    promptCharacters()
+    promptCharacters();
 
     // Loop promptCharacters as long as Parameter Variables = false
     while(!confirmLower && !confirmUpper && !confirmNum && !confirmSpec) {
       alert("Please choose at least one password parameter!");
-      promptCharacters()    
+      promptCharacters();
     }
 
   // Assign actions based on user input password parameters ↓
