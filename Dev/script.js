@@ -17,12 +17,12 @@ var confirmSpec;
 
 // Function to prompt user input
 function generatePassword() {
-  confirmLength = prompt("How many characters do you need in your password?");
+  confirmLength = prompt("How many characters do you need in your password? \nNOTE: A password can only be generated with a minimum of 8 characters and a maximum of 128 characters.");
 
     // Loop generatePassword function if user inputs less than 8 or greater than 128
     while(confirmLength <= 7 || confirmLength >= 129) {
       alert("Password length must be between 8 and 128 characters,\nplease try again!");
-      confirmLength = (prompt("How many characters would you like your password to be? \nA password can only be generated with a minimum of 8 characters and a maximum of 128 characters."));
+      confirmLength = (prompt("How many characters would you like your password to be? \nNOTE: A password can only be generated with a minimum of 8 characters and a maximum of 128 characters."));
     }
 
     // Alert confirmation of password length
