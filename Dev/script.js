@@ -16,38 +16,39 @@ var confirmNum;
 var confirmSpec;
 
 // Function to prompt user input
-function generatePassword() {
-  confirmLength = prompt("How many characters do you need in your password? \nNOTE: A password can only be generated with a minimum of 8 characters and a maximum of 128 characters.");
-
-    // Loop generatePassword function if user inputs less than 8 or greater than 128
-    while(confirmLength <= 7 || confirmLength >= 129) {
-      alert("Password length must be between 8 and 128 characters,\nplease try again!");
-      confirmLength = (prompt("How many characters would you like your password to be? \nNOTE: A password can only be generated with a minimum of 8 characters and a maximum of 128 characters."));
-    }
-
-    // Alert confirmation of password length
-    alert("Your password will be " + confirmLength + " characters long.");
-
-  // Confirm boxes for user to set parameters of password (confirmVariables)
+function promptCharacters () {
   confirmLower = confirm("Click OK if you would like your password to include lowercase characters.");
   confirmUpper = confirm("Click OK if you would like your password to include uppercase characters.");
   confirmNum = confirm("Click OK if you would like your password to include numeric characters.");
   confirmSpec = confirm("Click OK if you would like your password to include special characters.");
+}
 
-    // Loop confirmVariables if answer is outside the parameters (all false)
+// Function to execute parameter prompts & alerts
+function generatePassword() {
+  confirmLength = prompt("How many characters do you need in your password? \n\nNOTE: A password can only be generated with a minimum of 8 characters and a maximum of 128 characters.");
+
+    // Loop generatePassword function as long as user inputs less than 8 or greater than 128
+    while(confirmLength <= 7 || confirmLength >= 129) {
+      alert("Password length must be between 8 and 128 characters,\nplease try again!");
+      confirmLength = (prompt("How many characters would you like your password to be? \n\nNOTE: A password can only be generated with a minimum of 8 characters and a maximum of 128 characters."));
+    }
+   
+    // Alert confirmation of password length
+    alert("Your password will be " + confirmLength + " characters long.");
+    // Execute function for user to confirm desired password parameters
+    promptCharacters()
+
+    // Loop promptCharacters as long as Parameter Variables = false
     while(!confirmLower && !confirmUpper && !confirmNum && !confirmSpec) {
       alert("Please choose at least one password parameter!");
-      confirmLower = confirm("Click OK if you would like your password to include lowercase characters.");
-      confirmUpper = confirm("Click OK if you would like your password to include uppercase characters.");
-      confirmNum = confirm("Click OK if you would like your password to include numeric characters.");
-      confirmSpec = confirm("Click OK if you would like your password to include special characters.");  
+      promptCharacters()    
     }
 
   // Assign actions based on user input password parameters ↓
   // Empty array to be defined by concatenating (merging) w/parameter arrays using if conditionals where any of above parameters = true
   var passChar = [];
       
-    // If confirmVariables= true, then passChar concatenated with relative array value (ie. if confirmLower = true --> "__", "a", "b", "c" ...)
+    // If promptCharacters = true, then passChar concatenated with relative array value (ie. if confirmLower = true --> "__", "a", "b", "c" ...)
     if (confirmLower) {
       passChar = passChar.concat(alphaLower);
     }
