@@ -35,7 +35,7 @@ header {
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
-  color: hsl(208, 26%, 27%);
+  color: black;
   padding: 20px;
   padding-top: 0px;
   text-align: center;
