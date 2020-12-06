@@ -155,3 +155,15 @@ button[disabled] {
     font-size: 0.8rem;
   }
 }
+
+/*Center-align Footer to page*/
+.footer {
+  width: 100%;
+  color: #2e2e2e;
+  text-align: center;
+  padding-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  flex-shrink: 0;
+}
