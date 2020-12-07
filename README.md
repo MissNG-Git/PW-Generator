@@ -1,5 +1,7 @@
 # 03 JavaScript: Password Generator
 
+**[MissNG Password Generator](https://missng-git.github.io/BCS_PW-Generator/)**
+
 This application was created to generate a random password based on criteria a user has selected by modifying a starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by the included JavaScript code. I have kept the user interface polished and responsive, ensuring that it adapts to multiple screen sizes, only adding in a few special styles (like a gif background and some glow elements) to characterize individuality.
 
 The password is restricted to be between 8 - 128 characters, and can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
